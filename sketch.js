@@ -1,5 +1,3 @@
-var ti = performance.now();
-
 var cols = 50;
 var rows = 50;
 
@@ -105,9 +103,6 @@ function Spot(i,j){
 
       if (current === end){
         noSolution = false;
-        var tf = performance.now();
-        console.log(ti, tf, (tf-ti));
-        document.getElementById("time").innerHTML = "Tempo de execução: " + ((tf-ti)/1000).toFixed(2) + "s";
         document.getElementById("resultado").innerHTML = "Resultado: Solução encontrada!";
         document.getElementById("path").innerHTML = "Tamanho do caminho: " + path.length;
         noLoop();
